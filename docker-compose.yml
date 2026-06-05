@@ -9,6 +9,4 @@ services:
       SUPABASE_URL: ${SUPABASE_URL}
       SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
       JWT_SECRET: ${JWT_SECRET}
-    volumes:
-      - /opt/jobtracker/uploads:/app/uploads
     restart: unless-stopped
