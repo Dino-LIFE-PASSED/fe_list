@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  /* Slate → pure black palette */
+  --color-slate-100: #f2f2f2;
+  --color-slate-200: #dcdcdc;
+  --color-slate-300: #c4c4c4;
+  --color-slate-400: #a0a0a0;
+  --color-slate-500: #666666;
+  --color-slate-600: #383838;
+  --color-slate-700: #272727;
+  --color-slate-800: #1c1c1c;
+  --color-slate-900: #111111;
+  --color-slate-950: #080808;
+
+  /* Violet → dark for todo theme */
+  --color-violet-950: #080010;
+  --color-violet-900: #10001e;
+  --color-violet-700: #6d28d9;
+
+  /* Amber → dark for review theme */
+  --color-amber-950: #100800;
+  --color-amber-900: #1c0f00;
+  --color-amber-700: #b87800;
+
+  /* Emerald → dark for done theme */
+  --color-emerald-950: #00100a;
+  --color-emerald-900: #001c10;
+  --color-emerald-700: #007a42;
+
+  /* Blue → Yellow brand accent */
+  --color-blue-200: #f5f9a8;
+  --color-blue-300: #f0ef6e;
+  --color-blue-400: #e8e83a;
+  --color-blue-500: #e2e600;
+  --color-blue-600: #c8cc00;
+  --color-blue-700: #aaad00;
+  --color-blue-800: #282900;
+  --color-blue-900: #1e1f00;
+  --color-blue-950: #0e0f00;
+}
+
+html, body {
+  background-color: #111111;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent images inside draggable cards from intercepting drag/touch */
+[draggable="true"] img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+/* Prevent iOS Safari auto-zoom on input focus (requires font-size >= 16px) */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  font-size: max(16px, 1em);
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333333; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #555555; }
