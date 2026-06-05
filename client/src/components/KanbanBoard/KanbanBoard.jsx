@@ -16,7 +16,7 @@ function Column({ col, tasks, onCardClick, onDelete, isOver, onDragOver, onDragL
       onDragOver={canDrag ? onDragOver : undefined}
       onDragLeave={canDrag ? onDragLeave : undefined}
       onDrop={canDrag ? onDrop : undefined}
-      className={`rounded-2xl border-2 transition-all duration-150 ${
+      className={`h-full flex flex-col rounded-2xl border-2 transition-all duration-150 ${
         (isOver || touchOver) ? `${col.ring} ring-2 ring-offset-1 ring-offset-slate-900 border-transparent` : 'border-transparent'
       }`}
     >
@@ -30,7 +30,7 @@ function Column({ col, tasks, onCardClick, onDelete, isOver, onDragOver, onDragL
         </span>
       </div>
 
-      <div className={`rounded-xl ${col.bg} p-2 min-h-[200px] flex flex-col gap-2 ${(isOver || touchOver) ? 'opacity-75' : ''}`}>
+      <div className={`flex-1 rounded-xl ${col.bg} p-2 min-h-[200px] flex flex-col gap-2 ${(isOver || touchOver) ? 'opacity-75' : ''}`}>
         {tasks.map(task => (
           <div
             key={task.id}
