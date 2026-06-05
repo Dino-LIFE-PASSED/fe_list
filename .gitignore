@@ -9,3 +9,4 @@ dist/
 knowledge
 CLAUDE.md
 AGENTS.md
+client/.env
