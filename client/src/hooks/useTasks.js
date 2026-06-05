@@ -23,6 +23,7 @@ export function useTasks(filters = {}) {
 
   // Realtime: re-fetch when another user changes tasks table
   useEffect(() => {
+    if (!supabase) return
     const channel = supabase
       .channel('tasks-realtime')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'tasks' }, () => {
